@@ -8,3 +8,4 @@ import { AppComponent } from './components/appComponent/app.component.ts';
 bootstrap(AppComponent)
     .then(success => console.log(`Bootstrap success`))
     .catch(error => console.log(error));
+//test for git

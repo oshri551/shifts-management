@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     // for faster builds use 'eval'
@@ -8,10 +9,11 @@ module.exports = {
     
     entry: {
         'vendor': './app/vendor.ts',
-        "app": './app/boot.ts'
+        "app": './app/boot.ts',
+        "style": './app/styles.ts'
     },
     output: {
-        path: path.resolve('./dist'),
+        path: path.resolve('./app'),
         filename: '[name].js',
         sourceMapFilename: '[name].map',
         chunkFilename: '[id].chunk.js'
@@ -38,12 +40,25 @@ module.exports = {
                     ]
                 },
                 exclude: [ /\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/ ]
-            }
+            },
+            { 
+                test: /\.css$/,   
+                loader: ExtractTextPlugin.extract('raw-loader')
+            },
+            { test: /\.html$/,  loader: 'raw-loader' }
         ]
-    }/*,
+    },
+    plugins: [
+        new ExtractTextPlugin("style.css", {
+            allChunks: true
+        })
+    ],
     devServer: {
+        port: 3000,
+        host: 'localhost',
         historyApiFallback: true,
-        contentBase: '',
-        publicPath: '/app'
-    }*/
+        contentBase: path.resolve('./app')//,
+        //publicPath: '/app'
+        //outputPath: 
+    }
 }

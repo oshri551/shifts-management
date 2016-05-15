@@ -38,3 +38,5 @@ import '@angular/compiler';
 //import '@angular/upgrade';
 
 //Angular material
+import '@angular2-material/button';
+import '@angular2-material/input';

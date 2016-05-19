@@ -27,6 +27,13 @@ module.exports = {
       //extentions: ['', '.ts', '.js']  
     },
     module: {
+        preLoaders: [
+            { 
+                test: /\.component.css$/,
+                loader: 'raw-loader',
+                exclude: [path.resolve(__dirname, 'styles.ts')]
+            }
+        ],
         loaders: [
             {
                 test: /\.ts$/,
@@ -43,7 +50,8 @@ module.exports = {
             },
             { 
                 test: /\.css$/,   
-                loader: ExtractTextPlugin.extract('raw-loader')
+                loader: ExtractTextPlugin.extract('raw-loader'),
+                exclude: [/\.component\.css$/]
             },
             { test: /\.html$/,  loader: 'raw-loader' }
         ]

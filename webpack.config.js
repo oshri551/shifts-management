@@ -1,4 +1,4 @@
-//Webpack congiguration file
+//Webpack congiguration
 
 var path = require('path');
 var webpack = require('webpack');

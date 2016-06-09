@@ -8,10 +8,20 @@ import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
     selector: 'my-app',
     template: `
         <app-header></app-header>
-        <h1>{{title}}</h1>
-        <button md-raised-button>Test</button>
-        <md-input placeholder="Test" autofocus></md-input>
+        <div class="app-content">
+            <h1>{{title}}</h1>
+            <button md-raised-button>Test</button>
+            <md-input placeholder="Test" autofocus></md-input>
+        </div>
     `,
+    styles: [
+      `
+        .app-content {
+            position: relative;
+            padding: 40px 25px 30px;
+        }
+      `  
+    ],
     directives: [MdButton, MdAnchor, MD_INPUT_DIRECTIVES, appHeaderComponent]
 })
 export class AppComponent implements OnInit {

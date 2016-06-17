@@ -12,6 +12,7 @@ import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
             <h1>{{title}}</h1>
             <button md-raised-button>Test</button>
             <md-input placeholder="Test" autofocus></md-input>
+            <span>Span</span>
         </div>
     `,
     styles: [

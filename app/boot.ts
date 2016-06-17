@@ -3,7 +3,10 @@ import { bootstrap } from '@angular/platform-browser-dynamic';
 
 import { AppComponent } from './components/appComponent/app.component.ts';
 
-// enableProdMode();
+if(process.env.ENV === 'production') {
+    enableProdMode();
+}
+
 
 bootstrap(AppComponent)
     .then(success => console.log(`Bootstrap success`))

@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
     "clean": "rimraf dist",
-    "publish": "npm run build && git commit -m 'commit dist folder for pubish' && git push --delete origin gh-pages && git subtree push --prefix dist origin gh-pages && clean"
+    "publish": "npm run build && git add dist && git commit -m \"dist subtree commit\" && git push --delete origin gh-pages && git subtree push --prefix dist origin gh-pages && npm run clean"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",

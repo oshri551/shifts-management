@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-6">
+        <button md-raised-button 
+        (click)="addToList(newItem.value); newItem.value=''">Add</button>
+        <md-input #newItem placeholder="Write name (18 max)" maxLength="18" autofocus (keyup.enter)="addToList(newItem.value); newItem.value=''">
+            <md-hint align="end">{{newItem.characterCount}} / 18</md-hint>
+        </md-input>
+        
+    </div>
+
+    <div class="col-sm-6">
+        <div class="col-sm-3" *ngFor="let item of list; let i = index">
+            <lifecycle-hooks-test [logs]="logs" (onClose)="removeFromlist($event)" [name]="item"></lifecycle-hooks-test>
+            <br>
+        </div>
+        <!--
+        <ul class="ul-style">
+            <li *ngFor="let item of list; let i = index" class="col-sm-3 col-md-3 col-lg-3">
+                <lifecycle-hooks-test class="height" [logs]="logs" (onClose)="removeFromlist($event)" [name]="item"></lifecycle-hooks-test>
+            </li>
+        </ul>
+        -->
+    </div>
+</div>
+

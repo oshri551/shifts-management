@@ -1,10 +1,10 @@
 .main-nav {
     height: 56px;
     min-height: 56px;
-    padding: 0 16px;
-    background: #0273D4;
+    background: linear-gradient(#0143A3,#0273D4);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
     z-index: 10;
+    color: #fff;
 }
 
 .pinned-top {
@@ -13,4 +13,9 @@
     left: 0;
     right: 0;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
 

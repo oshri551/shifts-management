@@ -40,3 +40,25 @@ footer{
   justify-content: center;
   background: #fff;
 }
+
+.side-nav-custom {
+  width: 180px;
+  box-shadow: 3px 0 6px rgba(0,0,0,0.3) !important;
+  background: #ECEFF1;
+}
+
+.nav-block {
+  margin: 0;
+  padding: 0;
+  color: #546E7A;
+}
+
+.nav-tile {
+  text-decoration: none;
+  color: #536E7A;
+  display: block;
+}
+
+.nav-no-padding {
+  padding-top: 0px !important;
+}

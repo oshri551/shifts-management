@@ -9,19 +9,15 @@ import { MdToolbar } from '@angular2-material/toolbar';
     directives: [MdToolbar]
 })
 export class appHeaderComponent implements OnInit {
-    private menuState: boolean;
-    @Output() onMenuClick = new EventEmitter<boolean>();
+    @Output() onMenuClick = new EventEmitter();
 
     constructor() { }
 
     ngOnInit() { 
-        this.menuState = false;
     }
 
     toggleMenu() {
-        this.onMenuClick.emit(!this.menuState);
-        this.menuState = !this.menuState;
-        console.log("click event", this.menuState);
+        this.onMenuClick.emit({});
     }
 
 }

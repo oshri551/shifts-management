@@ -10,15 +10,26 @@ import { lifecycleHooksComponent } from '../lifecycleHooksComponent/lifecycleHoo
     selector: 'my-app',
     template: `
     <md-content>
-        <app-header (onMenuClick)="toggleMenu($event)"></app-header>
+        <app-header (onMenuClick)="toggleMenu()"></app-header>
 
         <md-sidenav-layout class="sidenav-layout">
-            <md-sidenav #sidenav mode="side">
-                <md-nav-list>
-                    <a md-list-item>Menu Item 1</a>
-                    <a md-list-item>Menu Item 2</a>
-                    <a md-list-item>Menu Item 3</a>
+            <md-sidenav #sidenav mode="over" class="side-nav-custom">
+                
+                <md-nav-list class="nav-no-padding">
+                    <md-list-item>
+                        <a class="nav-tile">Menu Item 1</a>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item>
+                        <a class="nav-tile">Menu Item 2</a>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item>
+                        <a class="nav-tile">Menu Item 3</a>
+                    </md-list-item>
+                    <md-divider></md-divider>
                 </md-nav-list>
+                
             </md-sidenav>
             <div class="app-content">
             <h1>{{title}} </h1>
@@ -48,9 +59,8 @@ export class AppComponent implements OnInit {
 
     ngOnInit() { }
 
-    toggleMenu (state: boolean) {
-        this.sidenav.toggle(state);
-        console.log("toggleMenu", state);
+    toggleMenu () {
+        this.sidenav.toggle();
     }
 
 }

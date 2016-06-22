@@ -21,7 +21,7 @@ import { lifecycleHooksComponent } from '../lifecycleHooksComponent/lifecycleHoo
                 </md-nav-list>
             </md-sidenav>
             <div class="app-content">
-            <h1>{{title}}</h1>
+            <h1>{{title}} </h1>
             
             <lifecycle-hooks></lifecycle-hooks>
         </div>

@@ -33,10 +33,9 @@ import { lifecycleHooksComponent } from '../lifecycleHooksComponent/lifecycleHoo
             </md-sidenav>
             <div class="app-content">
             <h1>{{title}} </h1>
-            <h2> Sub Title</h2>
             
             <lifecycle-hooks></lifecycle-hooks>
-        </div>
+        </div><!---->
         </md-sidenav-layout>
     </md-content>
     `,

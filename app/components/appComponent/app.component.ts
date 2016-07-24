@@ -15,7 +15,6 @@ import { lifecycleHooksComponent } from '../lifecycleHooksComponent/lifecycleHoo
             <button md-raised-button>Test</button>
             <md-input placeholder="Test" autofocus></md-input>
             <span>Span1</span>
-            <span> hello </span>
             -->
             <lifecycle-hooks></lifecycle-hooks>
         </div>

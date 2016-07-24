@@ -36,7 +36,7 @@ import { lifecycleHooksComponent } from '../lifecycleHooksComponent/lifecycleHoo
             
             <lifecycle-hooks></lifecycle-hooks>
 
-        </div><!--heloo13564654ooo-->
+        </div><!--heloo1dd3564654oasddoo-->
         </md-sidenav-layout>
     </md-content>
     `,

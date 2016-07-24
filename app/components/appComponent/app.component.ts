@@ -35,7 +35,11 @@ import { lifecycleHooksComponent } from '../lifecycleHooksComponent/lifecycleHoo
             <h1>{{title}} </h1>
             
             <lifecycle-hooks></lifecycle-hooks>
+<<<<<<< HEAD
         </div>
+=======
+        </div><!--heloo13564654ooo-->
+>>>>>>> 44ee85771e3c427dc1f567df201ff99e3ea88229
         </md-sidenav-layout>
     </md-content>
     `,

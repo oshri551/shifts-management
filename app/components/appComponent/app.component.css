@@ -1,0 +1,69 @@
+html, body{
+  height: 100%;
+  background: #F4FAFA;
+}
+body {
+    min-height: 100%;
+}
+
+.sidenav-layout {
+    height: 100%;
+}
+
+button.active{
+  background: #fff;
+  color: #009688;
+}
+button.active:hover{
+  color: #fff;
+}
+.fill{
+  flex: 1 1 auto;
+}
+.app-state{
+  margin: 15px;
+  flex: 1;
+}
+.home{
+  flex: 1;
+}
+md-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+footer{
+  flex: 0 0 60px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.side-nav-custom {
+  width: 180px;
+  box-shadow: 3px 0 6px rgba(0,0,0,0.3) !important;
+  background: #ECEFF1;
+}
+
+.nav-block {
+  margin: 0;
+  padding: 0;
+  color: #546E7A;
+}
+
+.nav-tile {
+  text-decoration: none;
+  color: #536E7A;
+  display: block;
+}
+
+.nav-no-padding {
+  padding-top: 0px !important;
+}
+
+.app-content {
+    position: relative;
+    padding: 40px 25px 30px;
+}

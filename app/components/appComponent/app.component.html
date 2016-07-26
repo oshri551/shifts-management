@@ -1,0 +1,31 @@
+<md-content>
+    <app-header (onMenuClick)="toggleMenu()"></app-header>
+
+    <md-sidenav-layout class="sidenav-layout">
+        <md-sidenav #sidenav mode="over" class="side-nav-custom">
+            
+            <md-nav-list class="nav-no-padding">
+                <md-list-item>
+                    <a class="nav-tile">Menu Item 1</a>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item>
+                    <a class="nav-tile">Menu Item 2</a>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item>
+                    <a class="nav-tile">Menu Item 3</a>
+                </md-list-item>
+                <md-divider></md-divider>
+            </md-nav-list>
+            
+        </md-sidenav>
+        <div class="app-content">
+        <h1>{{title}} </h1>
+        
+        <youtube-card></youtube-card>
+        <lifecycle-hooks></lifecycle-hooks>
+
+        </div>
+    </md-sidenav-layout>
+</md-content>

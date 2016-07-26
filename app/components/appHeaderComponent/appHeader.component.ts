@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 import { MdToolbar } from '@angular2-material/toolbar';
 
 @Component({
@@ -9,8 +9,15 @@ import { MdToolbar } from '@angular2-material/toolbar';
     directives: [MdToolbar]
 })
 export class appHeaderComponent implements OnInit {
+    @Output() onMenuClick = new EventEmitter();
+
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+    }
+
+    toggleMenu() {
+        this.onMenuClick.emit({});
+    }
 
 }

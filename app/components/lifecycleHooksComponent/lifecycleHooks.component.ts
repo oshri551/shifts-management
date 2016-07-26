@@ -1,6 +1,7 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { lifecycleHooksTestComponent } from '../lifecycleHooksTest/lifecycleHooksTest.component';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
+import { FORM_DIRECTIVES } from '@angular/forms'
 import { MdButton, MdAnchor } from '@angular2-material/button';
 
 @Component({
@@ -8,7 +9,7 @@ import { MdButton, MdAnchor } from '@angular2-material/button';
     selector: 'lifecycle-hooks',
     template: require('./lifecycleHooks.component.html'),
     styles: [require('./lifecycleHooks.component.css')],
-    directives: [MD_INPUT_DIRECTIVES, MdButton, MdAnchor, lifecycleHooksTestComponent]
+    directives: [MD_INPUT_DIRECTIVES, MdButton, MdAnchor, lifecycleHooksTestComponent, FORM_DIRECTIVES]
 })
 export class lifecycleHooksComponent implements OnInit {
     list: Array<string>;

@@ -22,8 +22,10 @@
         </md-sidenav>
         <div class="app-content">
         <h1>{{title}} </h1>
+       <div *ngFor="let card of cards">
+           <youtube-card [name]="card.name" [embed]="card.embed"></youtube-card>
+       </div>
         
-        <youtube-card></youtube-card>
         <lifecycle-hooks></lifecycle-hooks>
 
         </div>

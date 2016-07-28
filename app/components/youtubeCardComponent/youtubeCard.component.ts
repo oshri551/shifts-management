@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { MdButton, MdAnchor } from '@angular2-material/button';
 import { MdCard, MdCardHeader } from '@angular2-material/card';
 
@@ -12,8 +12,12 @@ import { MdCard, MdCardHeader } from '@angular2-material/card';
     directives: [MdCard, MdCardHeader ]
 })
 export class YoutubeCardComponent implements OnInit {
-    
-    constructor() { }
+    @Input () name: string;
+    @Input () embed: string;
+
+    constructor() {
+
+     }
 
     ngOnInit() { }
 

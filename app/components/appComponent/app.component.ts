@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, Input } from '@angular/core';
 import { MdSidenav ,MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 import { appHeaderComponent } from '../appHeaderComponent/appHeader.component.ts';
@@ -17,6 +17,10 @@ import { YoutubeCardComponent} from '../youtubeCardComponent/youtubeCard.compone
 })
 export class AppComponent implements OnInit {
     public title = "Angular 2 youtube-fav";
+    public cards = [
+        {name: 'vid1', embed: 'https://www.youtube.com/embed/SBjQ9tuuTJQ'},
+        {name: 'vid2', embed: 'https://www.youtube.com/embed/SBjQ9tuuTJQ'}
+    ]
 
     @ViewChild('sidenav') private sidenav: MdSidenav;
     

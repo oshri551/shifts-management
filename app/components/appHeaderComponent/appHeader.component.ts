@@ -10,10 +10,11 @@ import { MdToolbar } from '@angular2-material/toolbar';
 })
 export class appHeaderComponent implements OnInit {
     @Output() onMenuClick = new EventEmitter();
+    imgSrc = "assets/img/new-deli-logo-retina.png"
 
     constructor() { }
 
-    ngOnInit() { 
+    ngOnInit() {
     }
 
     toggleMenu() {

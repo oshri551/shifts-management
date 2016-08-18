@@ -1,7 +1,8 @@
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var helpers = require('./helpers');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const helpers = require('./helpers');
 
 module.exports = {
   entry: {
@@ -69,6 +70,19 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: 'app/index.html'
-    })
+    }),
+
+    /*
+     * Plugin: CopyWebpackPlugin
+     * Description: Copy files and directories in webpack.
+     *
+     * Copies project static assets.
+     *
+     * See: https://www.npmjs.com/package/copy-webpack-plugin
+     */
+    new CopyWebpackPlugin([{
+      from: 'app/assets',
+      to: 'assets'
+    }])
   ]
 };

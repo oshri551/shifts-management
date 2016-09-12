@@ -5,7 +5,6 @@ import { FORM_DIRECTIVES } from '@angular/forms'
 import { MdButton, MdAnchor } from '@angular2-material/button';
 
 @Component({
-    moduleId: module.id,
     selector: 'lifecycle-hooks',
     template: require('./lifecycleHooks.component.html'),
     styles: [require('./lifecycleHooks.component.css')],

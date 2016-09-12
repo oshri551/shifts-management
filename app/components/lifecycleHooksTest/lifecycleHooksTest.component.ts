@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'lifecycle-hooks-test',
     template: require('./lifecycleHooksTest.component.html'),
     styles: [require('./lifecycleHooksTest.component.css')]

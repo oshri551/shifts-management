@@ -1,17 +1,15 @@
 import { enableProdMode } from '@angular/core';
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import { HTTP_PROVIDERS } from '@angular/http';
-import {disableDeprecatedForms, provideForms} from '@angular/forms';
-import { appRouterProviders } from './app.routes';
-
-import { AppComponent } from './components/appComponent/app.component.ts';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
 if(process.env.ENV === 'production') {
     enableProdMode();
 }
 
+platformBrowserDynamic().bootstrapModule(AppModule);
 
-bootstrap(AppComponent, [HTTP_PROVIDERS, disableDeprecatedForms(), provideForms(), appRouterProviders])
-    .then(success => console.log(`Bootstrap success`))
-    .catch(error => console.log(error));
+
+
+
+
 
